@@ -1,0 +1,13 @@
+{
+    "base": {
+        "url": "http://localhost:51544"
+    },
+
+    "endpoints" : {
+        "placeOrder": "/v1/orders",
+        "fetchOrder": "/v1/orders/",
+        "takeOrder": "/take",
+        "completeOrder": "/complete",
+        "cancelOrder":"/cancel"
+    }
+}

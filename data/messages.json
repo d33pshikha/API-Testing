@@ -1,0 +1,10 @@
+{
+    "messages": {
+        "invalidStopsInvalidJson": "error in field(s): stops",
+        "pastDatePlaceOrder": "field orderAt is behind the present time",
+        "invalidOrderID": "ORDER_NOT_FOUND",
+        "orderNotOnGoing": "Order status is not ONGOING",
+        "alreadyCompletedOrder": "Order status is COMPLETED already",
+        "orderNotAssigning": "Order status is not ASSIGNING",
+        "serviceUnavailable": "Service Unavailable"    }
+}

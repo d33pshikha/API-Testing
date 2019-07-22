@@ -1,0 +1,30 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "description": "API AUtomation",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha 'test/**/*.js' --reporter mochawesome"
+  },
+  "author": "Deepshikha",
+  "license": "ISC",
+  "dependencies": {
+    
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "chai-json-schema": "^1.5.1",
+    "csvtojson": "^2.0.10",
+    "http-constants": "^1.1.5",
+    "mocha": "^6.1.4",
+    "mocha-each": "^1.2.0",
+    "mochawesome": "^3.1.2",
+    "moment-timezone": "^0.5.26",
+    "randomatic": "^3.1.1",
+    "superagent": "^5.1.0",
+    "superagent-defaults": "^0.1.14"
+  }
+}
