@@ -7,10 +7,10 @@ const util = require('../../lib/util.js');
 const constants = require('./../order/constants.js');
 let totalStops = util.generateRandomIntegerWithRange(2, 4);
 
-describe('Place Order - POST /v1/orders @APIAutomation', () => {
+describe('Place Order - POST /v1/orders @APIAutomation', function() {
 
     withThese(constants.INVALID_STOPS).
-        describe('Place Order @APIAutomation', (stops) => {
+        describe('Place Order @APIAutomation', function(stops) {
 
             it('should not create order for invalid ' + stops + ' stops ', async function () {
                 //Creating order payload
@@ -23,7 +23,7 @@ describe('Place Order - POST /v1/orders @APIAutomation', () => {
         });
 
     withThese(constants.NO_OF_STOPS).
-        describe('Place Order @APIAutomation', (stops) => {
+        describe('Place Order @APIAutomation', function(stops) {
 
 
             it('should not create order for past order Date with ' + stops + ' stops ', async function () {
@@ -87,7 +87,7 @@ describe('Place Order - POST /v1/orders @APIAutomation', () => {
         });
 });
 
-describe('Fetch Order - GET /v1/orders/{orderID} @APIAutomation', () => {
+describe('Fetch Order - GET /v1/orders/{orderID} @APIAutomation', function() {
 
     withThese(constants.NO_OF_STOPS).
         describe('Fetch Order @APIAutomation', (stops) => {
@@ -120,7 +120,7 @@ describe('Fetch Order - GET /v1/orders/{orderID} @APIAutomation', () => {
 
 });
 
-describe('Take Order to Endpoint - PUT /v1/orders/{orderID}/take @APIAutomation', () => {
+describe('Take Order to Endpoint - PUT /v1/orders/{orderID}/take @APIAutomation', function() {
 
 
     it('driver to Take the Order to endpoint', async function () {
@@ -140,7 +140,7 @@ describe('Take Order to Endpoint - PUT /v1/orders/{orderID}/take @APIAutomation'
 
 });
 
-describe('Complete Order - PUT /v1/orders/{orderID}/complete @APIAutomation', () => {
+describe('Complete Order - PUT /v1/orders/{orderID}/complete @APIAutomation', function() {
     describe('Complete Order @APIAutomation', () => {
         let orderID = "";
         beforeEach(async function () {
@@ -190,7 +190,7 @@ describe('Complete Order - PUT /v1/orders/{orderID}/complete @APIAutomation', ()
 
 });
 
-describe('Cancel Order - PUT /v1/orders/{orderID}/cancel @APIAutomation', () => {
+describe('Cancel Order - PUT /v1/orders/{orderID}/cancel @APIAutomation', function() {
 
 
     describe('Cancel Order @APIAutomation', () => {
