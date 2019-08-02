@@ -85,6 +85,15 @@ describe('Place Order - POST /v1/orders @APIAutomation', function() {
             let res = await helpers.createOrder(orderData);
             validate.placeOrderInvalidStopJson(res);
         });
+
+	it('should create order for current Date', async function () {
+            //Creating order payload
+            let orderData = await helpers.generateCreateOrderPayload(totalStops, util.getDateTime(constants.DATE.CURRENT));
+            let stopsCount = orderData.stops.length;
+            //Response
+            let res = await helpers.createOrder(orderData);
+            validate.placeOrderPastTime(res);
+        });
 });
 
 describe('Fetch Order - GET /v1/orders/{orderID} @APIAutomation', function() {
